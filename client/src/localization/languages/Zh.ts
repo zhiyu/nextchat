@@ -78,7 +78,7 @@ export default {
   com_assistants_create_error: '创建助手时出现错误。',
   com_assistants_conversation_starters: '对话启动器',
   com_assistants_conversation_starters_placeholder: '输入对话启动器',
-  com_sidepanel_agent_builder: '智能体构建器',
+  com_sidepanel_agent_builder: '智能体',
   com_agents_name_placeholder: '可选：智能体名称',
   com_agents_description_placeholder: '可选：在此描述您的智能体',
   com_agents_instructions_placeholder: '智能体使用的系统指令',
