@@ -69,8 +69,8 @@ export default defineConfig({
         navigateFallbackDenylist: [/^\/oauth/],
       },
       manifest: {
-        name: 'LibreChat',
-        short_name: 'LibreChat',
+        name: 'ChatNext',
+        short_name: 'ChatNext',
         start_url: '/',
         display: 'standalone',
         background_color: '#000000',

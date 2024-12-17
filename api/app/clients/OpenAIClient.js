@@ -724,7 +724,7 @@ class OpenAIClient extends BaseClient {
       configOptions.baseOptions = {
         headers: {
           'HTTP-Referer': 'https://librechat.ai',
-          'X-Title': 'LibreChat',
+          'X-Title': 'ChatNext',
         },
       };
     }
@@ -1168,7 +1168,7 @@ ${convo}
       if (this.useOpenRouter) {
         opts.defaultHeaders = {
           'HTTP-Referer': 'https://librechat.ai',
-          'X-Title': 'LibreChat',
+          'X-Title': 'ChatNext',
         };
       }
 
@@ -1237,9 +1237,9 @@ ${convo}
 
         opts.baseURL = this.langchainProxy
           ? constructAzureURL({
-            baseURL: this.langchainProxy,
-            azureOptions: this.azure,
-          })
+              baseURL: this.langchainProxy,
+              azureOptions: this.azure,
+            })
           : this.azureEndpoint.split(/(?<!\/)\/(chat|completion)\//)[0];
 
         opts.defaultQuery = { 'api-version': this.azure.azureOpenAIApiVersion };

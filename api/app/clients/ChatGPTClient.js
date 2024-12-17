@@ -249,9 +249,9 @@ class ChatGPTClient extends BaseClient {
 
       baseURL = this.langchainProxy
         ? constructAzureURL({
-          baseURL: this.langchainProxy,
-          azureOptions: this.azure,
-        })
+            baseURL: this.langchainProxy,
+            azureOptions: this.azure,
+          })
         : this.azureEndpoint.split(/(?<!\/)\/(chat|completion)\//)[0];
 
       if (this.options.forcePrompt) {
@@ -272,7 +272,7 @@ class ChatGPTClient extends BaseClient {
 
     if (this.useOpenRouter) {
       opts.headers['HTTP-Referer'] = 'https://librechat.ai';
-      opts.headers['X-Title'] = 'LibreChat';
+      opts.headers['X-Title'] = 'ChatNext';
     }
 
     if (this.options.proxy) {
