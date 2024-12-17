@@ -247,7 +247,7 @@ export default function AgentConfig({
             name="id"
             control={control}
             render={({ field }) => (
-              <p className="h-3 text-xs italic text-text-secondary" aria-live="polite">
+              <p className="hidden h-3 text-xs italic text-text-secondary" aria-live="polite">
                 {field.value}
               </p>
             )}
@@ -414,13 +414,13 @@ export default function AgentConfig({
           />
           {(agent?.author === user?.id || user?.role === SystemRoles.ADMIN) &&
             hasAccessToShareAgents && (
-            <ShareAgent
-              agent_id={agent_id}
-              agentName={agent?.name ?? ''}
-              projectIds={agent?.projectIds ?? []}
-              isCollaborative={agent?.isCollaborative}
-            />
-          )}
+              <ShareAgent
+                agent_id={agent_id}
+                agentName={agent?.name ?? ''}
+                projectIds={agent?.projectIds ?? []}
+                isCollaborative={agent?.isCollaborative}
+              />
+            )}
           {/* Submit Button */}
           <button
             className="btn btn-primary focus:shadow-outline flex h-9 w-full items-center justify-center px-4 py-2 font-semibold text-white hover:bg-green-600 focus:border-green-500"
