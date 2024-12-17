@@ -342,7 +342,7 @@ export default function AgentConfig({
               {localize('com_assistants_capabilities')}
             </label>
             {/* Code Execution */}
-            {codeEnabled && <CodeForm agent_id={agent_id} files={code_files} />}
+            {/* {codeEnabled && <CodeForm agent_id={agent_id} files={code_files} />} */}
             {/* File Search */}
             {fileSearchEnabled && <FileSearch agent_id={agent_id} files={knowledge_files} />}
           </div>
