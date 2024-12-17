@@ -91,7 +91,7 @@ export default function Presentation({
     return (
       <div
         ref={drop}
-        className="relative flex w-full grow overflow-hidden bg-white px-2 dark:bg-gray-800"
+        className="relative flex w-full grow overflow-hidden bg-white pl-2 dark:bg-gray-800"
       >
         <SidePanel
           defaultLayout={defaultLayout}
