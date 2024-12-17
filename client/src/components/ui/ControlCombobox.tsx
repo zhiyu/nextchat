@@ -63,11 +63,11 @@ function ControlCombobox({
               'flex items-center justify-center gap-2 rounded-full bg-surface-secondary',
               'text-text-primary hover:bg-surface-tertiary',
               'border border-border-light',
-              isCollapsed ? 'h-10 w-10' : 'h-10 w-full rounded-md px-3 py-2 text-sm',
+              isCollapsed ? 'h-8 w-8' : 'h-10 w-full rounded-md px-3 py-2 text-sm',
             )}
           >
             {SelectIcon != null && (
-              <div className="assistant-item flex h-5 w-5 items-center justify-center overflow-hidden rounded-full">
+              <div className="flex h-5 w-5 items-center justify-center overflow-hidden rounded-full">
                 {SelectIcon}
               </div>
             )}
