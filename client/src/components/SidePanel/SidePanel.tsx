@@ -254,7 +254,7 @@ const SidePanel = ({
             localStorage.setItem('react-resizable-panels:collapsed', 'true');
           }}
           className={cn(
-            'sidenav hide-scrollbar border-l border-gray-100 bg-background transition-opacity',
+            'sidenav hide-scrollbar border-l border-gray-100 bg-background transition-opacity dark:border-gray-800',
             isCollapsed ? 'min-w-[50px]' : 'min-w-[340px] sm:min-w-[352px]',
             (isSmallScreen && isCollapsed && (minSize === 0 || collapsedSize === 0)) || fullCollapse
               ? 'hidden min-w-0'
