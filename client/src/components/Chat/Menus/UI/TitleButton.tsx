@@ -10,7 +10,7 @@ export default function TitleButton({ primaryText = '', secondaryText = '' }) {
   return (
     <Trigger asChild>
       <button
-        className="group flex cursor-pointer items-center gap-2 rounded-lg px-3 py-1.5 transition-colors duration-200 hover:bg-surface-hover radix-state-open:bg-surface-hover"
+        className="group flex cursor-pointer items-center gap-2 rounded-lg py-1.5 pl-3 pr-2 transition-colors duration-200 hover:bg-surface-hover radix-state-open:bg-surface-hover"
         aria-label={localize('com_ui_endpoint_menu')}
         aria-expanded={isExpanded}
         role="combobox"
