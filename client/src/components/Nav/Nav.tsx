@@ -157,7 +157,7 @@ const Nav = ({
                 <nav
                   id="chat-history-nav"
                   aria-label={localize('com_ui_chat_history')}
-                  className="flex h-full w-full flex-col px-3 pb-3.5"
+                  className="flex h-full w-full flex-col px-2 pb-2"
                 >
                   <div
                     className={cn(

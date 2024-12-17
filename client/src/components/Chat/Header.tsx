@@ -41,9 +41,11 @@ export default function Header() {
           {interfaceConfig.endpointsMenu === true && <EndpointsMenu />}
           {modelSpecs.length > 0 && <ModelSpecsMenu modelSpecs={modelSpecs} />}
           {<HeaderOptions interfaceConfig={interfaceConfig} />}
-          {interfaceConfig.presets === true && <PresetsMenu />}
-          {hasAccessToBookmarks === true && <BookmarkMenu />}
-          {hasAccessToMultiConvo === true && <AddMultiConvo />}
+          <div className="flex">
+            {interfaceConfig.presets === true && <PresetsMenu />}
+            {hasAccessToBookmarks === true && <BookmarkMenu />}
+            {hasAccessToMultiConvo === true && <AddMultiConvo />}
+          </div>
           {isSmallScreen && (
             <ExportAndShareMenu
               isSharedButtonEnabled={startupConfig?.sharedLinksEnabled ?? false}

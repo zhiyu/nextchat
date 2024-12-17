@@ -229,7 +229,8 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
     }
   }
 
-  const columns = columnsSet.size === 1 ? columnsSet.values().next().value : 2;
+  var columns = columnsSet.size === 1 ? columnsSet.values().next().value : 2;
+  columns = columns ? columns : 2;
 
   for (const setting of settings) {
     for (const field of requiredSettingFields) {

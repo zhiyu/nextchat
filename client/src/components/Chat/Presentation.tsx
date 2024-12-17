@@ -91,7 +91,7 @@ export default function Presentation({
     return (
       <div
         ref={drop}
-        className="relative flex w-full grow overflow-hidden bg-white dark:bg-gray-800"
+        className="relative flex w-full grow overflow-hidden bg-white px-2 dark:bg-gray-800"
       >
         <SidePanel
           defaultLayout={defaultLayout}
@@ -101,8 +101,8 @@ export default function Presentation({
             artifactsVisible === true &&
             codeArtifacts === true &&
             Object.keys(artifacts ?? {}).length > 0 ? (
-                <Artifacts />
-              ) : null
+              <Artifacts />
+            ) : null
           }
         >
           <main className="flex h-full flex-col" role="main">

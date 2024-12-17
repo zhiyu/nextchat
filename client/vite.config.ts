@@ -38,11 +38,15 @@ export default defineConfig({
     strictPort: false,
     proxy: {
       '/api': {
-        target: 'http://localhost:3080',
+        target: 'http://47.239.217.87:3080',
+        changeOrigin: true,
+      },
+      '/images': {
+        target: 'http://47.239.217.87:3080',
         changeOrigin: true,
       },
       '/oauth': {
-        target: 'http://localhost:3080',
+        target: 'http://47.239.217.87:3080',
         changeOrigin: true,
       },
     },

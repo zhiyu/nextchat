@@ -26,14 +26,14 @@ const BookmarkNav: FC<BookmarkNavProps> = ({ tags, setTags, isSmallScreen }: Boo
         <>
           <MenuButton
             className={cn(
-              'mt-text-sm flex h-10 w-full items-center gap-2 rounded-lg p-2 text-sm transition-colors duration-200 hover:bg-surface-hover',
+              'mt-text-sm mt-1 flex h-10 w-full items-center gap-1 rounded-lg p-2 text-sm transition-colors duration-200 hover:bg-surface-hover',
               open ? 'bg-surface-hover' : '',
               isSmallScreen ? 'h-12' : '',
             )}
             data-testid="bookmark-menu"
           >
             <div className="h-7 w-7 flex-shrink-0">
-              <div className="relative flex h-full items-center justify-center rounded-full border border-border-medium bg-surface-primary-alt text-text-primary">
+              <div className="relative flex h-full items-center justify-center rounded-full text-text-primary">
                 {tags.length > 0 ? (
                   <BookmarkFilledIcon className="h-4 w-4" />
                 ) : (
@@ -41,7 +41,7 @@ const BookmarkNav: FC<BookmarkNavProps> = ({ tags, setTags, isSmallScreen }: Boo
                 )}
               </div>
             </div>
-            <div className="grow overflow-hidden whitespace-nowrap text-left text-sm font-medium text-text-primary">
+            <div className="grow overflow-hidden whitespace-nowrap text-left text-sm text-text-primary">
               {tags.length > 0 ? tags.join(', ') : localize('com_ui_bookmarks')}
             </div>
           </MenuButton>

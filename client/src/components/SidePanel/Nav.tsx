@@ -5,6 +5,7 @@ import { Accordion, AccordionItem, AccordionContent } from '~/components/ui/Acco
 import { TooltipAnchor, Button } from '~/components';
 import { useLocalize } from '~/hooks';
 import { cn } from '~/utils';
+import { ChevronDownIcon } from '@radix-ui/react-icons';
 
 export default function Nav({ links, isCollapsed, resize, defaultActive }: NavProps) {
   const localize = useLocalize();
@@ -64,9 +65,9 @@ export default function Nav({ links, isCollapsed, resize, defaultActive }: NavPr
                         <AccordionPrimitive.Header asChild>
                           <AccordionPrimitive.Trigger asChild>
                             <Button
-                              variant="outline"
+                              variant="ghost"
                               size="sm"
-                              className="w-full justify-start bg-transparent text-text-secondary data-[state=open]:bg-surface-secondary data-[state=open]:text-text-primary"
+                              className="group w-full justify-start bg-transparent text-text-secondary data-[state=open]:bg-surface-secondary data-[state=open]:text-text-primary"
                               onClick={(e) => {
                                 if (link.onClick) {
                                   link.onClick(e);
@@ -86,6 +87,10 @@ export default function Nav({ links, isCollapsed, resize, defaultActive }: NavPr
                                   {link.label}
                                 </span>
                               )}
+                              <ChevronDownIcon
+                                className="text-violet10 ease-[cubic-bezier(0.87,_0,_0.13,_1)] absolute right-6 transition-transform duration-300 group-data-[state=open]:rotate-180"
+                                aria-hidden
+                              />
                             </Button>
                           </AccordionPrimitive.Trigger>
                         </AccordionPrimitive.Header>

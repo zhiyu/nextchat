@@ -6,8 +6,8 @@ import {
   useGetStartupConfig,
   useUserKeyQuery,
 } from 'librechat-data-provider/react-query';
-import type { TEndpointsConfig, TInterfaceConfig } from 'librechat-data-provider';
 import type { ImperativePanelHandle } from 'react-resizable-panels';
+import type { TEndpointsConfig } from 'librechat-data-provider';
 import { ResizableHandleAlt, ResizablePanel, ResizablePanelGroup } from '~/components/ui/Resizable';
 import { useMediaQuery, useLocalStorage, useLocalize } from '~/hooks';
 import useSideNavLinks from '~/hooks/Nav/useSideNavLinks';
@@ -65,7 +65,7 @@ const SidePanel = ({
   const { data: endpointsConfig = {} as TEndpointsConfig } = useGetEndpointsQuery();
   const { data: startupConfig } = useGetStartupConfig();
   const interfaceConfig = useMemo(
-    () => (startupConfig?.interface ?? defaultInterface) as Partial<TInterfaceConfig>,
+    () => startupConfig?.interface ?? defaultInterface,
     [startupConfig],
   );
 
@@ -117,17 +117,17 @@ const SidePanel = ({
   });
 
   const calculateLayout = useCallback(() => {
-    if (artifacts == null) {
+    if (!artifacts) {
       const navSize = defaultLayout.length === 2 ? defaultLayout[1] : defaultLayout[2];
       return [100 - navSize, navSize];
     } else {
-      const navSize = 0;
+      const navSize = Math.max(minSize, navCollapsedSize);
       const remainingSpace = 100 - navSize;
       const newMainSize = Math.floor(remainingSpace / 2);
       const artifactsSize = remainingSpace - newMainSize;
       return [newMainSize, artifactsSize, navSize];
     }
-  }, [artifacts, defaultLayout]);
+  }, [artifacts, defaultLayout, minSize, navCollapsedSize]);
 
   const currentLayout = useMemo(() => normalizeLayout(calculateLayout()), [calculateLayout]);
 
@@ -219,8 +219,8 @@ const SidePanel = ({
             className={cn(
               'fixed top-1/2',
               (isCollapsed && (minSize === 0 || collapsedSize === 0)) || fullCollapse
-                ? 'mr-9'
-                : 'mr-16',
+                ? 'mr-8'
+                : 'mr-8',
             )}
             translateX={false}
             side="right"
@@ -254,18 +254,18 @@ const SidePanel = ({
             localStorage.setItem('react-resizable-panels:collapsed', 'true');
           }}
           className={cn(
-            'sidenav hide-scrollbar border-l border-border-light bg-background transition-opacity',
+            'sidenav hide-scrollbar border-l border-gray-100 bg-background transition-opacity',
             isCollapsed ? 'min-w-[50px]' : 'min-w-[340px] sm:min-w-[352px]',
             (isSmallScreen && isCollapsed && (minSize === 0 || collapsedSize === 0)) || fullCollapse
               ? 'hidden min-w-0'
               : 'opacity-100',
           )}
         >
-          {interfaceConfig.modelSelect === true && (
+          {interfaceConfig.modelSelect && (
             <div
               className={cn(
-                'sticky left-0 right-0 top-0 z-[100] flex h-[52px] flex-wrap items-center justify-center bg-background',
-                isCollapsed ? 'h-[52px]' : 'px-2',
+                'sticky left-0 right-0 top-0 z-[100] flex h-[64px] flex-wrap items-center justify-center bg-background',
+                isCollapsed ? 'h-[64px]' : 'px-2',
               )}
             >
               <Switcher
