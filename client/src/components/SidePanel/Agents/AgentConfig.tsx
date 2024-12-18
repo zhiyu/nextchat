@@ -415,7 +415,6 @@ export default function AgentConfig({
           />
           {(agent?.author === user?.id || user?.role === SystemRoles.ADMIN) &&
             hasAccessToShareAgents && (
-<<<<<<< HEAD
               <ShareAgent
                 agent_id={agent_id}
                 agentName={agent?.name ?? ''}
@@ -423,16 +422,7 @@ export default function AgentConfig({
                 isCollaborative={agent?.isCollaborative}
               />
             )}
-=======
-            <ShareAgent
-              agent_id={agent_id}
-              agentName={agent?.name ?? ''}
-              projectIds={agent?.projectIds ?? []}
-              isCollaborative={agent?.isCollaborative}
-            />
-          )}
           {agent && agent.author === user?.id && <DuplicateAgent agent_id={agent_id} />}
->>>>>>> upstream/main
           {/* Submit Button */}
           <button
             className="btn btn-primary focus:shadow-outline flex h-9 w-full items-center justify-center px-4 py-2 font-semibold text-white hover:bg-green-600 focus:border-green-500"
