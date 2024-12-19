@@ -148,7 +148,11 @@ export default function ActionsPanel({
               </OGDialog>
             )}
 
-            <div className="text-xl font-medium">{(action ? 'Edit' : 'Add') + ' ' + 'actions'}</div>
+            <div className="text-xl font-medium">
+              {(action ? localize('com_ui_edit') : localize('com_ui_add')) +
+                ' ' +
+                localize('com_assistants_actions')}
+            </div>
             <div className="text-xs text-text-secondary">
               {localize('com_assistants_actions_info')}
             </div>

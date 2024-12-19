@@ -209,7 +209,7 @@ export default function AgentPanel({
         className="scrollbar-gutter-stable h-auto w-full flex-shrink-0 overflow-x-hidden"
         aria-label="Agent configuration form"
       >
-        <div className="mt-2 flex w-full flex-wrap gap-2">
+        <div className="flex w-full flex-wrap gap-2">
           <Controller
             name="agent"
             control={control}
