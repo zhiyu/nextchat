@@ -224,20 +224,6 @@ export default function AgentPanel({
               />
             )}
           />
-          {/* Select Button */}
-          {agent_id && (
-            <Button
-              variant="submit"
-              disabled={!agent_id}
-              onClick={(e) => {
-                e.preventDefault();
-                handleSelectAgent();
-              }}
-              aria-label="Select agent"
-            >
-              {localize('com_ui_select')}
-            </Button>
-          )}
         </div>
         {!canEditAgent && (
           <div className="flex h-[30vh] w-full items-center justify-center">

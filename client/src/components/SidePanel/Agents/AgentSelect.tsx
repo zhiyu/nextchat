@@ -9,7 +9,7 @@ import type { TAgentCapabilities, AgentForm, TAgentOption } from '~/common';
 import { cn, createDropdownSetter, createProviderOption, processAgentOption } from '~/utils';
 import SelectDropDown from '~/components/ui/SelectDropDown';
 import { useListAgentsQuery } from '~/data-provider';
-import { useLocalize } from '~/hooks';
+import { useLocalize, useSelectAgent } from '~/hooks';
 
 const keys = new Set(Object.keys(defaultAgentFormValues));
 
@@ -125,6 +125,8 @@ export default function AgentSelect({
     [agents, createMutation, setCurrentAgentId, agentQuery.data, resetAgentForm, reset],
   );
 
+  const { onSelect: onSelectAgent } = useSelectAgent();
+
   useEffect(() => {
     if (agentQuery.data && agentQuery.isSuccess) {
       resetAgentForm(agentQuery.data);
@@ -157,10 +159,14 @@ export default function AgentSelect({
     ? currentAgentValue.value != null && currentAgentValue.value !== ''
     : typeof currentAgentValue !== 'undefined');
 
+  function changeAgent(agent_id) {
+    onSelect(agent_id);
+    onSelectAgent(agent_id);
+  }
   return (
     <SelectDropDown
       value={!hasAgentValue ? createAgent : (currentAgentValue as TAgentOption)}
-      setValue={createDropdownSetter(onSelect)}
+      setValue={createDropdownSetter(changeAgent)}
       availableValues={
         agents ?? [
           {

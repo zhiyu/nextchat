@@ -262,18 +262,11 @@ const SidePanel = ({
           )}
         >
           {interfaceConfig.modelSelect && (
-            <div
-              className={cn(
-                'sticky left-0 right-0 top-0 z-[100] flex h-[64px] flex-wrap items-center justify-center bg-background',
-                isCollapsed ? 'h-[64px]' : 'px-2',
-              )}
-            >
-              <Switcher
-                isCollapsed={isCollapsed}
-                endpointKeyProvided={keyProvided}
-                endpoint={endpoint}
-              />
-            </div>
+            <Switcher
+              isCollapsed={isCollapsed}
+              endpointKeyProvided={keyProvided}
+              endpoint={endpoint}
+            />
           )}
           <Nav
             resize={panelRef.current?.resize}

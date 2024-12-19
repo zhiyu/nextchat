@@ -600,7 +600,7 @@ export default {
   com_assistants_conversation_starters_placeholder: '輸入對話開場白',
   com_download_expires: '(點擊此處下載 - {0} 後過期)',
   com_sidepanel_agent_builder: '智能體',
-  com_agents_name_placeholder: '選填：智能體人的名稱',
+  com_agents_name_placeholder: '請輸入智能體人的名稱',
   com_assistants_conversation_starters: '對話起點',
   com_agents_description_placeholder: '選填：在此描述您的智能體程式',
   com_assistants_code_interpreter_info:

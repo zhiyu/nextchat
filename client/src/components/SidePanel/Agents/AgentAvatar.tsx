@@ -181,9 +181,9 @@ function Avatar({
 
   return (
     <Popover.Root open={menuOpen} onOpenChange={setMenuOpen}>
-      <div className="flex w-full items-center  gap-4">
+      <div className="flex w-full items-center justify-center gap-4">
         <Popover.Trigger asChild>
-          <button type="button" className="h-12 w-12">
+          <button type="button" className="h-20 w-20">
             {previewUrl ? <AgentAvatarRender url={previewUrl} progress={progress} /> : <NoImage />}
           </button>
         </Popover.Trigger>
