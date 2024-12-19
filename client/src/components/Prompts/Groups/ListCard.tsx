@@ -25,8 +25,8 @@ export default function ListCard({
     <div
       onClick={onClick}
       onKeyDown={handleKeyDown}
-      className="relative my-2 flex w-full cursor-pointer flex-col gap-2 rounded-2xl border border-border-light px-3 pb-4 pt-3 text-start
-      align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition-all duration-300 ease-in-out hover:bg-surface-tertiary"
+      className="relative mt-2 flex w-full cursor-pointer flex-col gap-2 rounded-lg px-4 pb-4 pt-3 text-start
+      align-top shadow-lg transition-all duration-300 ease-in-out hover:bg-surface-tertiary"
       role="button"
       tabIndex={0}
       aria-labelledby={`card-title-${name}`}
