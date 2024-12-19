@@ -68,8 +68,8 @@ export default function ActionsInput({
     if (!validationResult || !validationResult.status || !validationResult.spec) {
       return;
     }
-
     const { functionSignatures, requestBuilders } = openapiToFunction(validationResult.spec);
+
     const specs = Object.entries(requestBuilders).map(([name, props]) => {
       return {
         name,

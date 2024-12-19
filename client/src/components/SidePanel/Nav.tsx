@@ -96,7 +96,11 @@ export default function Nav({ links, isCollapsed, resize, defaultActive }: NavPr
                         </AccordionPrimitive.Header>
 
                         <AccordionContent className="w-full dark:text-white">
-                          {link.Component && <link.Component />}
+                          {link.Component && (
+                            <div className="p-2">
+                              <link.Component />
+                            </div>
+                          )}
                         </AccordionContent>
                       </AccordionItem>
                     </Accordion>

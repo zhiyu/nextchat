@@ -42,7 +42,7 @@ export const AgentAvatarRender = ({
 
   return (
     <div>
-      <div className="relative h-20 w-20 overflow-hidden rounded-full">
+      <div className="relative h-12 w-12 overflow-hidden rounded-full">
         <img
           src={url}
           className="bg-token-surface-secondary dark:bg-token-surface-tertiary h-full w-full rounded-full object-cover"
