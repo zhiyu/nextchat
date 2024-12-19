@@ -90,8 +90,8 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
   return (
     <div className="relative h-full">
       <div className="absolute left-0 right-0">{Header != null ? Header : null}</div>
-      <div className="flex h-full  items-center justify-center">
-        <div className={cn('relative h-14 w-14', name && avatar ? 'mb-0' : 'mb-3')}>
+      <div className="flex h-full items-center justify-center">
+        <div className={cn('relative mr-2 h-14 w-14')}>
           <ConvoIcon
             agentsMap={agentsMap}
             assistantMap={assistantMap}
@@ -99,8 +99,6 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
             endpointsConfig={endpointsConfig}
             containerClassName={containerClassName}
             context="landing"
-            className="h-2/3 w-2/3"
-            size={41}
           />
           {startupConfig?.showBirthdayIcon === true ? (
             <TooltipAnchor
@@ -119,7 +117,7 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
             </div>
           </div>
         ) : (
-          <h2 className="mb-5 max-w-[75vh] px-12 text-lg font-medium dark:text-white md:px-0 md:text-2xl">
+          <h2 className="max-w-[75vh] px-12 text-lg font-medium dark:text-white md:px-0 md:text-2xl">
             {getWelcomeMessage()}
           </h2>
         )}
