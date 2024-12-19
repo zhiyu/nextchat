@@ -160,8 +160,11 @@ export default function AgentSelect({
     : typeof currentAgentValue !== 'undefined');
 
   function changeAgent(agent_id) {
-    onSelect(agent_id);
-    onSelectAgent(agent_id);
+    if (agent_id == '') {
+      onSelect(agent_id);
+    } else {
+      onSelectAgent(agent_id);
+    }
   }
   return (
     <SelectDropDown

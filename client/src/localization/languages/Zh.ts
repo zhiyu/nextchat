@@ -58,7 +58,7 @@ export default {
   com_assistants_add_actions: '添加动作',
   com_assistants_non_retrieval_model: '此模型未启用文件搜索功能。请选择其他模型。',
   com_assistants_available_actions: '可用动作',
-  com_assistants_running_action: '正在知行动作',
+  com_assistants_running_action: '正在执行动作',
   com_assistants_completed_action: '与 {0} 聊天',
   com_assistants_completed_function: '运行 {0}',
   com_assistants_function_use: '助手使用了 {0}',
