@@ -72,7 +72,7 @@ export default function DataTable<TData, TValue>({ columns, data }: DataTablePro
 
   return (
     <>
-      <div className="flex items-center gap-4 py-4">
+      <div className="flex items-center gap-4">
         <Input
           placeholder={localize('com_files_filter')}
           value={(table.getColumn('filename')?.getFilterValue() as string) ?? ''}
@@ -80,7 +80,7 @@ export default function DataTable<TData, TValue>({ columns, data }: DataTablePro
           className="w-full border-border-light placeholder:text-text-secondary"
         />
       </div>
-      <div className="overflow-y-auto rounded-md border border-black/10 dark:border-white/10">
+      <div className="mt-2 overflow-y-auto rounded-md border border-black/10 dark:border-white/10">
         <Table className="border-separate border-spacing-0 ">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup, index) => (

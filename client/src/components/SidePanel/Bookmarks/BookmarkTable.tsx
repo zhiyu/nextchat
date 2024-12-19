@@ -50,7 +50,7 @@ const BookmarkTable = () => {
   const currentRows = filteredRows.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
   return (
     <BookmarkContext.Provider value={{ bookmarks }}>
-      <div className="flex items-center gap-4 py-4">
+      <div className="flex items-center gap-4">
         <Input
           placeholder={localize('com_ui_bookmarks_filter')}
           value={searchQuery}
@@ -58,7 +58,7 @@ const BookmarkTable = () => {
           className="w-full border-border-light placeholder:text-text-secondary"
         />
       </div>
-      <div className="overflow-y-auto rounded-md border border-border-light">
+      <div className="mt-2 overflow-y-auto rounded-md border border-border-light">
         <Table className="table-fixed border-separate border-spacing-0">
           <TableHeader>
             <TableRow>

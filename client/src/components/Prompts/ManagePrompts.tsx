@@ -17,7 +17,7 @@ export default function ManagePrompts({ className }: { className?: string }) {
   const clickHandler = useCustomLink('/d/prompts', clickCallback);
 
   return (
-    <Button variant="outline" className={cn(className, 'bg-transparent')} onClick={clickHandler}>
+    <Button variant="ghost" className={cn(className, 'bg-transparent')} onClick={clickHandler}>
       {localize('com_ui_manage')}
     </Button>
   );

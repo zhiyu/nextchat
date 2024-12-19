@@ -4,6 +4,7 @@ import PanelNavigation from '~/components/Prompts/Groups/PanelNavigation';
 import { useMediaQuery, usePromptGroupsNav } from '~/hooks';
 import List from '~/components/Prompts/Groups/List';
 import { cn } from '~/utils';
+import ManagePrompts from '~/components/Prompts/ManagePrompts';
 
 export default function GroupSidePanel({
   children,
@@ -36,11 +37,7 @@ export default function GroupSidePanel({
     >
       {children}
       <div className="flex-grow overflow-y-auto">
-        <List
-          groups={promptGroups}
-          isChatRoute={isChatRoute}
-          isLoading={!!groupsQuery?.isLoading}
-        />
+        <List groups={promptGroups} isLoading={!!groupsQuery?.isLoading} />
       </div>
       <PanelNavigation
         nextPage={nextPage}

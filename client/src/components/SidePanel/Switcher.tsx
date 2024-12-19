@@ -24,9 +24,9 @@ export default function Switcher(props: SwitcherProps) {
     //     <AgentSwitcher {...props} />
     //   </div>
     // );
-    return <div className="mt-3"></div>;
+    return <div className="mt-2"></div>;
   } else if (isAssistantsEndpoint(props.endpoint)) {
-    return <div className="mt-3"></div>;
+    return <div className="mt-2"></div>;
   }
 
   return (

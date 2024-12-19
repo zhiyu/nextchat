@@ -118,7 +118,7 @@ export default function Parameters() {
   }
 
   return (
-    <div className="h-auto max-w-full overflow-x-hidden p-3">
+    <div className="h-auto max-w-full overflow-x-hidden">
       <div className="grid grid-cols-4 gap-6">
         {' '}
         {/* This is the parent element containing all settings */}

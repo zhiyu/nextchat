@@ -97,7 +97,7 @@ export default function Nav({ links, isCollapsed, resize, defaultActive }: NavPr
 
                         <AccordionContent className="w-full dark:text-white">
                           {link.Component && (
-                            <div className="p-2">
+                            <div className="px-2 py-4">
                               <link.Component />
                             </div>
                           )}
