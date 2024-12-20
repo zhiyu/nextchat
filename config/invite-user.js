@@ -49,7 +49,7 @@ const connect = require('./connect');
   const token = await createInvite(email);
   const inviteLink = `${process.env.DOMAIN_CLIENT}/register?token=${token}`;
 
-  const appName = process.env.APP_TITLE || 'NextChat';
+  const appName = process.env.APP_TITLE || 'nextchat';
 
   if (!checkEmailConfig()) {
     console.green('Send this link to the user:', inviteLink);

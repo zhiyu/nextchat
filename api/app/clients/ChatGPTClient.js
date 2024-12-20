@@ -272,7 +272,7 @@ class ChatGPTClient extends BaseClient {
 
     if (this.useOpenRouter) {
       opts.headers['HTTP-Referer'] = 'https://librechat.ai';
-      opts.headers['X-Title'] = 'NextChat';
+      opts.headers['X-Title'] = 'nextchat';
     }
 
     if (this.options.proxy) {
