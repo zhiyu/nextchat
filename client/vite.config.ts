@@ -69,8 +69,8 @@ export default defineConfig({
         navigateFallbackDenylist: [/^\/oauth/],
       },
       manifest: {
-        name: 'ChatNext',
-        short_name: 'ChatNext',
+        name: 'NextChat',
+        short_name: 'NextChat',
         start_url: '/',
         display: 'standalone',
         background_color: '#000000',

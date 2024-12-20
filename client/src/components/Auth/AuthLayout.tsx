@@ -65,7 +65,7 @@ function AuthLayout({
           <img
             src="/assets/codium.svg"
             className="h-full w-full object-contain"
-            alt={localize('com_ui_logo', startupConfig?.appTitle ?? 'ChatNext')}
+            alt={localize('com_ui_logo', startupConfig?.appTitle ?? 'NextChat')}
           />
         </div>
       </BlinkAnimation>
